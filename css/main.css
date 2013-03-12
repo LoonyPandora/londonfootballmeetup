@@ -4,7 +4,9 @@
 
 
 body {
-    background: #fff;
+    background: #222222;
+    padding: 20px;
+    text-align: center;
 }
 
 h1 {
@@ -18,44 +20,160 @@ h1 {
     text-rendering: optimizelegibility;
 }
 
-h2 {
-    text-align:     left;
-    padding-left:   30px;
-    color:          #181818;
-    line-height:    2.8em;
-    font-size:      30px;
-    font-family:    "ITCAvantGardeStd-Demi";
-    font-weight:    normal;
-    background:     #fff;
-    height:         80px;
-    width:          830px;
-    position:       fixed;
-    top:             50%;
-    left:            50%;
-    margin-top:     -220px;
-    margin-left:     -430px;
-    text-rendering: optimizelegibility;
-    
-    -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
+
+
+/* Hexagons */
+
+.list-hex-grid {
+    margin-top: 55px;
+    margin-bottom: 55px;
+    font-size: 0;
+    word-spacing: 0;
 }
 
-h2:after {
-    content: "";
+
+.list-hex-grid .hex {
+    width: 190px;
+    margin: 37px 10px;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    position: relative;
+    z-index: 10;
+}
+
+.list-hex-grid .hex > a,
+.list-hex-grid .hex > div {
+  height: 110px;
+  line-height: 220px;
+}
+
+.list-hex-grid .hex .inner {
+  top: -55px;
+}
+
+
+
+.list-hex-grid .hex .left:before {
+  -webkit-transform: rotate(-60deg) translate(-110px, 0);
+     -moz-transform: rotate(-60deg) translate(-110px, 0);
+      -ms-transform: rotate(-60deg) translate(-110px, 0);
+       -o-transform: rotate(-60deg) translate(-110px, 0);
+          transform: rotate(-60deg) translate(-110px, 0);
+}
+
+
+.list-hex-grid .hex .right:before {
+  -webkit-transform: rotate(60deg) translate(40px, 40px);
+     -moz-transform: rotate(60deg) translate(40px, 40px);
+      -ms-transform: rotate(60deg) translate(40px, 40px);
+       -o-transform: rotate(60deg) translate(40px, 40px);
+          transform: rotate(60deg) translate(40px, 40px);
+}
+
+
+.list-hex-grid .hex > a,
+.list-hex-grid .hex > div {
+  font-size: 18px;
+  word-spacing: 1px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(/img/pic.jpg);
+  text-align: center;
+  display: block;
+  border: none;
+  color: #fff;
+  
+  -webkit-background-size: auto 220px;
+     -moz-background-size: auto 220px;
+       -o-background-size: auto 220px;
+          background-size: auto 220px;
+
+
+  -webkit-backface-visibility: hidden;
+}
+
+
+.hex .inner {
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 20;
+  position: relative;
+  max-width: 80%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 22px;
+}
+
+
+.hex .left,
+.hex .right {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  overflow: hidden;
+  background: inherit;
+  -webkit-backface-visibility: hidden;
+}
+
+.list-hex-grid .hex .left:before,
+.list-hex-grid .hex .right:before {
+    height: 220px;
+    width: 220px;
+    content: '';
     position: absolute;
-    top: -15px;
-    left: 30px;
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 15px solid #fff;
+    background: inherit;
+    left: 0;
+    z-index: -1;
+    background: inherit;
 }
 
-#pagebackground {
-    overflow:   hidden;
-    background: #f5f5f5;
-    margin:     20px;
-    min-height: 750px;
+.list-hex-grid .hex .left .after,
+.list-hex-grid .hex .right .after {
+  z-index: -1;
 }
+
+.list-hex-grid .hex .left {
+  z-index: -1;
+  -webkit-transform: rotate(60deg);
+     -moz-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+       -o-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.list-hex-grid .hex .left:before {
+  -webkit-transform-origin: 0 0;
+     -moz-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+       -o-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.list-hex-grid .hex .right {
+  -webkit-transform: rotate(-60deg);
+     -moz-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+       -o-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+.list-hex-grid .hex .right:before {
+  bottom: 0;
+}
+
+.list-hex-grid .hex .after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  background: #ee6557;
+}
+
