@@ -52,7 +52,7 @@ h1 {
 
 .hexagons div {
     text-indent: 0;
-    width: 100px;
+    width: 99px;
     height: 117px;
     background-color: #ddd;
     background-size: cover;
