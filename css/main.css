@@ -21,9 +21,19 @@ h1 {
 }
 
 
+.hexagons {
+    max-width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 0;
+    outline: 1px solid #111;
+    list-style: none;
+}
 
 
-.image {
+
+.hexagons li {
+    text-indent: 0;
     width: 100px;
     height: 122px;
     background-image: url("/img/pic.jpg");
@@ -45,7 +55,7 @@ h1 {
 }
 
 
-.image .overlay {
+.hexagons li .overlay {
     height: 122px;
     line-height: 122px;
     vertical-align: middle;
@@ -56,7 +66,7 @@ h1 {
     font-size: 18px;
 }
 
-.image .top:after {
+.hexagons li .top:after {
     content: "";
     position: absolute;
     top: 0;
@@ -69,7 +79,7 @@ h1 {
     border-color: transparent #222 transparent transparent;
 }
 
-.image .top:before {
+.hexagons li .top:before {
     content: "";
     position: absolute;
     top: 0;
@@ -84,7 +94,7 @@ h1 {
 
 
 
-.image .bottom:before {
+.hexagons li .bottom:before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -97,7 +107,7 @@ h1 {
     border-color: transparent transparent transparent #222;
 }
 
-.image .bottom:after {
+.hexagons li .bottom:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -111,13 +121,6 @@ h1 {
 }
 
 
-
-.hexagons {
-    max-width: 1200px;
-    height: 500px;
-    margin: 0 auto;
-    outline: 1px solid #111;
-}
 
 
 
