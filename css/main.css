@@ -31,20 +31,19 @@ h1 {
 
 
 @media screen and (min-width: 1px) {
-    .hexagons  { width: 100%; }
     br.desktop { display: none; }
     br.mobile  { display: none; }
 }
 
 
-@media screen and (min-width: 550px) {
-    .hexagons  { width: 540px; }
+@media screen and (min-width: 380px) {
+    .hexagons  { width: 360px; }
     br.desktop { display: none; }
     br.mobile  { display: block; }
 }
 
-@media screen and (min-width: 700px) {
-    .hexagons  { width: 680px; }
+@media screen and (min-width: 630px) {
+    .hexagons  { width: 600px; }
     br.desktop { display: block; }
     br.mobile  { display: none; }
 }
@@ -54,9 +53,8 @@ h1 {
 .hexagons div {
     text-indent: 0;
     width: 100px;
-    height: 122px;
-    background-image: url("/img/pic.jpg");
-    background-color: #fff;
+    height: 117px;
+    background-color: #ddd;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -65,7 +63,7 @@ h1 {
     
 /*    -webkit-transform: rotate(30deg);*/
     
-    margin: -15px 15px 0 15px;
+    margin: -10px 8px 0 8px;
 
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
@@ -143,13 +141,3 @@ h1 {
     border-color: transparent transparent #222 transparent;
 }
 
-
-
-
-br {
-/*    display: none;*/
-}
-
-
-
-/* Hexagons */
