@@ -5,7 +5,7 @@
 
 body {
     background: #222;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
 }
 
@@ -21,18 +21,37 @@ h1 {
 }
 
 
+
+
 .hexagons {
-    max-width: 1200px;
-    height: 500px;
     margin: 0 auto;
-    padding: 0;
-    outline: 1px solid #111;
+    padding: 15px 0 0 0;
     list-style: none;
 }
 
 
+@media screen and (min-width: 1px) {
+    .hexagons  { width: 100%; }
+    br.desktop { display: none; }
+    br.mobile  { display: none; }
+}
 
-.hexagons li {
+
+@media screen and (min-width: 550px) {
+    .hexagons  { width: 540px; }
+    br.desktop { display: none; }
+    br.mobile  { display: block; }
+}
+
+@media screen and (min-width: 700px) {
+    .hexagons  { width: 680px; }
+    br.desktop { display: block; }
+    br.mobile  { display: none; }
+}
+
+
+
+.hexagons div {
     text-indent: 0;
     width: 100px;
     height: 122px;
@@ -42,11 +61,11 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    float: left;
+    display: inline-block;
     
 /*    -webkit-transform: rotate(30deg);*/
     
-    margin: 10px;
+    margin: -15px 15px 0 15px;
 
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
@@ -55,8 +74,12 @@ h1 {
 }
 
 
-.hexagons li .overlay {
+.hexagons div .overlay {
+    display: inline-block;
     height: 122px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     line-height: 122px;
     vertical-align: middle;
     color: #fff;
@@ -66,7 +89,7 @@ h1 {
     font-size: 18px;
 }
 
-.hexagons li .top:after {
+.hexagons div .top:after {
     content: "";
     position: absolute;
     top: 0;
@@ -79,7 +102,7 @@ h1 {
     border-color: transparent #222 transparent transparent;
 }
 
-.hexagons li .top:before {
+.hexagons div .top:before {
     content: "";
     position: absolute;
     top: 0;
@@ -94,7 +117,7 @@ h1 {
 
 
 
-.hexagons li .bottom:before {
+.hexagons div .bottom:before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -107,7 +130,7 @@ h1 {
     border-color: transparent transparent transparent #222;
 }
 
-.hexagons li .bottom:after {
+.hexagons div .bottom:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -123,13 +146,8 @@ h1 {
 
 
 
-
-.image:nth-child(even) {
-
-}
-
-.image:nth-child(odd) {
-
+br {
+/*    display: none;*/
 }
 
 
