@@ -22,158 +22,89 @@ h1 {
 
 
 
-/* Hexagons */
 
-.list-hex-grid {
-    margin-top: 55px;
-    margin-bottom: 55px;
-    font-size: 0;
-    word-spacing: 0;
-}
-
-
-.list-hex-grid .hex {
-    width: 190px;
-    margin: 37px 10px;
-    font-size: 16px;
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+.image {
+    width: 100px;
+    height: 120px;
+    background-image: url("/img/pic.jpg");
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
-    z-index: 10;
+    float: left;
+    margin: 0 10px 0 10px;
+
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 
-.list-hex-grid .hex > a,
-.list-hex-grid .hex > div {
-  height: 110px;
-  line-height: 220px;
-}
-
-.list-hex-grid .hex .inner {
-  top: -55px;
-}
-
-
-
-.list-hex-grid .hex .left:before {
-  -webkit-transform: rotate(-60deg) translate(-110px, 0);
-     -moz-transform: rotate(-60deg) translate(-110px, 0);
-      -ms-transform: rotate(-60deg) translate(-110px, 0);
-       -o-transform: rotate(-60deg) translate(-110px, 0);
-          transform: rotate(-60deg) translate(-110px, 0);
-}
-
-
-.list-hex-grid .hex .right:before {
-  -webkit-transform: rotate(60deg) translate(40px, 40px);
-     -moz-transform: rotate(60deg) translate(40px, 40px);
-      -ms-transform: rotate(60deg) translate(40px, 40px);
-       -o-transform: rotate(60deg) translate(40px, 40px);
-          transform: rotate(60deg) translate(40px, 40px);
-}
-
-
-.list-hex-grid .hex > a,
-.list-hex-grid .hex > div {
-  font-size: 18px;
-  word-spacing: 1px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(/img/pic.jpg);
-  text-align: center;
-  display: block;
-  border: none;
-  color: #fff;
-  
-  -webkit-background-size: auto 220px;
-     -moz-background-size: auto 220px;
-       -o-background-size: auto 220px;
-          background-size: auto 220px;
-
-
-  -webkit-backface-visibility: hidden;
-}
-
-
-.hex .inner {
-  display: inline-block;
-  vertical-align: middle;
-  z-index: 20;
-  position: relative;
-  max-width: 80%;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  line-height: 22px;
-}
-
-
-.hex .left,
-.hex .right {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  overflow: hidden;
-  background: inherit;
-  -webkit-backface-visibility: hidden;
-}
-
-.list-hex-grid .hex .left:before,
-.list-hex-grid .hex .right:before {
-    height: 220px;
-    width: 220px;
-    content: '';
+.image .top:after {
+    content: "";
     position: absolute;
-    background: inherit;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    background: transparent;
+    border-width: 0 52px 30px 0;
+    border-color: transparent #222 transparent transparent;
+}
+
+.image .top:before {
+    content: "";
+    position: absolute;
+    top: 0;
     left: 0;
-    z-index: -1;
-    background: inherit;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    background: transparent;
+    border-width: 30px 52px 0 0;
+    border-color: #222 transparent transparent transparent;
 }
 
-.list-hex-grid .hex .left .after,
-.list-hex-grid .hex .right .after {
-  z-index: -1;
+
+
+.image .bottom:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    background: transparent;
+    border-width: 30px 0 0 52px;
+    border-color: transparent transparent transparent #222;
 }
 
-.list-hex-grid .hex .left {
-  z-index: -1;
-  -webkit-transform: rotate(60deg);
-     -moz-transform: rotate(60deg);
-      -ms-transform: rotate(60deg);
-       -o-transform: rotate(60deg);
-          transform: rotate(60deg);
+.image .bottom:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    background: transparent;
+    border-width: 0 0 30px 52px;
+    border-color: transparent transparent #222 transparent;
 }
 
-.list-hex-grid .hex .left:before {
-  -webkit-transform-origin: 0 0;
-     -moz-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-       -o-transform-origin: 0 0;
-          transform-origin: 0 0;
+
+
+.hexagons {
+    max-width: 1240px;
+    height: 500px;
+    margin: 0 auto;
+    outline: 1px solid #111;
 }
 
-.list-hex-grid .hex .right {
-  -webkit-transform: rotate(-60deg);
-     -moz-transform: rotate(-60deg);
-      -ms-transform: rotate(-60deg);
-       -o-transform: rotate(-60deg);
-          transform: rotate(-60deg);
-}
 
-.list-hex-grid .hex .right:before {
-  bottom: 0;
-}
 
-.list-hex-grid .hex .after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 15;
-  background: #ee6557;
-}
 
+/* Hexagons */
