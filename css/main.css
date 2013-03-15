@@ -4,21 +4,37 @@
 
 
 body {
-    background: #2C3E50;
+    background: #34495E;
     padding: 0px;
     text-align: center;
+    color:          #eee;
+    font-family:   "Hevletica", "Arial", sans-serif;
 }
 
-h1 {
-    text-align:     center;
-    color:          #eee;
-    letter-spacing: -2px;
-    line-height:    2em;
-    font-size:      72px;
+
+h1, h2, h3 {
     font-family:   "Lato", "Hevletica", "Arial", sans-serif;
     font-weight:    300;
-    margin:         0;
+    text-align:     center;
+    color:          #eee;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    line-height:    1.5em;
+}
+
+
+h1 {
+    background-color: #2C3E50;
+    letter-spacing: -2px;
+    /* word-spacing shifts center aligned text off-center - hence the hair space in the title */
+    vertical-align: middle;
+    font-size:      72px;
+    padding:        0 0 9px 0;
+    margin:         0 0 36px 0;
     text-rendering: optimizelegibility;
+}
+
+h2 {
+    font-size: 28px;
 }
 
 
@@ -62,7 +78,7 @@ h1 {
     position: relative;
     display: inline-block;
     overflow: hidden;
-    
+
 /*    -webkit-transform: rotate(30deg);*/
     
     margin: -10px 8px 0 8px;
@@ -90,6 +106,7 @@ h1 {
     text-shadow: 2px 2px 0px #000;
     font-size: 18px;
     z-index: 1;
+    
 }
 
 .hexagons div .top:after {
@@ -102,7 +119,7 @@ h1 {
     border-style: solid;
     background: transparent;
     border-width: 0 52px 30px 0;
-    border-color: transparent #2C3E50 transparent transparent;
+    border-color: transparent #34495E transparent transparent;
     z-index: 2;
 }
 
@@ -116,7 +133,7 @@ h1 {
     border-style: solid;
     background: transparent;
     border-width: 30px 52px 0 0;
-    border-color: #2C3E50 transparent transparent transparent;
+    border-color: #34495E transparent transparent transparent;
     z-index: 2;
 }
 
@@ -132,7 +149,7 @@ h1 {
     border-style: solid;
     background: transparent;
     border-width: 30px 0 0 52px;
-    border-color: transparent transparent transparent #2C3E50;
+    border-color: transparent transparent transparent #34495E;
     z-index: 2;
 }
 
@@ -146,7 +163,7 @@ h1 {
     border-style: solid;
     background: transparent;
     border-width: 0 0 30px 52px;
-    border-color: transparent transparent #2C3E50 transparent;
+    border-color: transparent transparent #34495E transparent;
     z-index: 2;
 }
 
