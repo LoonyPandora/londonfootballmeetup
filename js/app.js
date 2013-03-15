@@ -18,7 +18,7 @@ $(document).ready(function(){
                             .text(post.data.title)
                     );
 
-                    $('.latest-posts').append($link);
+                    $(".latest-posts").append($link);
                 }
             );
         },
@@ -26,6 +26,23 @@ $(document).ready(function(){
             console.log(arguments);
         }
     });
+
+
+    $.ajax("http://api.reddit.com/r/londonfootballmeetup/about.json?jsonp=?", {
+        dataType : "json",
+        data     : { limit: 5 },
+        success  : function(response, textStatus, jqXHR) {
+            
+           $(".about-text").text( response.data.public_description );
+            
+        },
+        error : function() {
+            console.log(arguments);
+        }
+    });
+
+
+
 
 
 
