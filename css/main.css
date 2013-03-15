@@ -4,18 +4,19 @@
 
 
 body {
-    background: #222;
+    background: #2C3E50;
     padding: 0px;
     text-align: center;
 }
 
 h1 {
     text-align:     center;
-    color:          #181818;
+    color:          #eee;
     letter-spacing: -2px;
     line-height:    2em;
     font-size:      72px;
-    font-family:   "ITCAvantGardeStd-Demi";
+    font-family:   "Lato", "Hevletica", "Arial", sans-serif;
+    font-weight:    300;
     margin:         0;
     text-rendering: optimizelegibility;
 }
@@ -54,7 +55,7 @@ h1 {
     text-indent: 0;
     width: 99px;
     height: 117px;
-    background-color: #ddd;
+    background-color: #eee;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -101,7 +102,7 @@ h1 {
     border-style: solid;
     background: transparent;
     border-width: 0 52px 30px 0;
-    border-color: transparent #222 transparent transparent;
+    border-color: transparent #2C3E50 transparent transparent;
     z-index: 2;
 }
 
@@ -115,7 +116,7 @@ h1 {
     border-style: solid;
     background: transparent;
     border-width: 30px 52px 0 0;
-    border-color: #222 transparent transparent transparent;
+    border-color: #2C3E50 transparent transparent transparent;
     z-index: 2;
 }
 
@@ -131,7 +132,7 @@ h1 {
     border-style: solid;
     background: transparent;
     border-width: 30px 0 0 52px;
-    border-color: transparent transparent transparent #222;
+    border-color: transparent transparent transparent #2C3E50;
     z-index: 2;
 }
 
@@ -145,7 +146,7 @@ h1 {
     border-style: solid;
     background: transparent;
     border-width: 0 0 30px 52px;
-    border-color: transparent transparent #222 transparent;
+    border-color: transparent transparent #2C3E50 transparent;
     z-index: 2;
 }
 
