@@ -28,4 +28,18 @@ $(document).ready(function(){
     });
 
 
+
+    $(".hexagons div").hover(
+        function () {
+            var $hexDiv = $(this);
+            $hexDiv.append(
+                $("<span/>").addClass("overlay").text( $hexDiv.data("name") )
+            )
+            // $(this).data("name");
+        },
+        function () {
+            $(this).find("span:last").remove();
+        }
+    );
+
 });
