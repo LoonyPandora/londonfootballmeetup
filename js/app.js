@@ -12,7 +12,10 @@ $(document).ready(function(){
             $.each(response.data.children,
                 function (i, post) {
                     var $link = $("<li/>").append(
-                        $("<a/>").attr("href", post.data.url).text(post.data.title)
+                        $("<a/>")
+                            .attr("href", post.data.url)
+                            .attr("title", post.data.title)
+                            .text(post.data.title)
                     );
 
                     $('.latest-posts').append($link);
