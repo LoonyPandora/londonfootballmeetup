@@ -12,7 +12,7 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/modernizr-2.6.2.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -30,7 +30,19 @@
 
 
     <h2>Where We Play</h2>
+    <ul class="nav nav-pills">
+        <li><a href="#regents-park" data-toggle="pill">Regent's Park</a></li>
+        <li><a href="#stratford" data-toggle="pill">Stratford</a></li>
+        <li><a href="#camden" data-toggle="pill">Camden</a></li>
+    </ul>
 
+    <div class="tab-content">
+        <div class="tab-pane active" id="regents-park">
+            <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps/ms?msid=207627779850726004772.0004d3d52e8f5207eecb0&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;ll=51.52526,-0.151191&amp;spn=0.008037,0.019162&amp;output=embed"></iframe>
+        </div>
+        <div class="tab-pane" id="stratford">STRATFORD</div>
+        <div class="tab-pane" id="camden">CAMDEN</div>
+    </div>
 
     <h2>Latest Posts</h2>
 
@@ -142,6 +154,7 @@
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/mustache.min.js"></script>
     <script src="js/markdown.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
 
     <script id="latest-posts-template" type="text/template">

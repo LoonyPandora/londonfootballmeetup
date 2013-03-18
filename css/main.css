@@ -5,9 +5,11 @@
 
 body {
     background: #34495E;
-    padding: 0px;
+    padding: 0;
+    margin: 0;
     text-align: center;
     color:          #eee;
+    line-height: 1.5em;
     font-family:   "Hevletica", "Arial", sans-serif;
 }
 
@@ -19,6 +21,12 @@ a {
 a:hover {
     color: #fff;
 }
+
+strong {
+    display: block;
+    margin-top: 2.5em;
+}
+
 
 h1, h2, h3 {
     font-family:   "Lato", "Hevletica", "Arial", sans-serif;
@@ -45,6 +53,17 @@ h2 {
     font-size: 28px;
 }
 
+
+.nav {
+    padding: 9px 0 9px 9px;
+    background: rgba( 255,255,255, 0.1);
+    margin: 0 auto 1.5em auto;
+}
+
+.nav li {
+    text-align: center;
+    margin-right: 10px;
+}
 
 
 .faq-content {
@@ -92,13 +111,13 @@ h2 {
 
 
 @media screen and (min-width: 380px) {
-    .hexagons, .latest-posts, .faq-content { width: 360px; }
+    .hexagons, .latest-posts, .faq-content, .nav { width: 360px; }
     br.desktop { display: none; }
     br.mobile  { display: block; }
 }
 
 @media screen and (min-width: 630px) {
-    .hexagons, .latest-posts, .faq-content  { width: 600px; }
+    .hexagons, .latest-posts, .faq-content, .nav  { width: 600px; }
     br.desktop { display: block; }
     br.mobile  { display: none; }
 }
