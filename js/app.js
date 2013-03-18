@@ -31,17 +31,6 @@ $(document).ready(function(){
         }
     });
 
-    // Generic "About Us" Info
-    $.ajax("http://api.reddit.com/r/londonfootballmeetup/about.json?jsonp=?", {
-        dataType : "json",
-        data     : { limit: 5 },
-        success  : function(response, textStatus, jqXHR) {
-            $(".about-text").text( response.data.public_description );
-        },
-        error : function() {
-            console.log(arguments);
-        }
-    });
 
     // FAQ page
     $.ajax("http://api.reddit.com/comments/19wn4j.json?jsonp=?", {
@@ -60,6 +49,20 @@ $(document).ready(function(){
     });
 
 
+    // Subreddit info page
+    $.ajax("http://api.reddit.com/r/londonfootballmeetup/about.json?jsonp=?", {
+        dataType : "json",
+        data     : { limit: 5 },
+        success  : function(response, textStatus, jqXHR) {
+            // Too simplistic to bother with a template
+            $(".sidebar-content").append( markdown.toHTML(response.data.description) );
+        },
+        error : function() {
+            console.log(arguments);
+        }
+    });
+
+
 
     $(".hexagons div").hover(
         function () {
@@ -67,7 +70,6 @@ $(document).ready(function(){
             $hexDiv.append(
                 $("<span/>").addClass("overlay").text( $hexDiv.data("name") )
             )
-            // $(this).data("name");
         },
         function () {
             $(this).find("span:last").remove();
