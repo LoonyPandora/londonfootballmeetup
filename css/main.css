@@ -159,11 +159,31 @@ iframe {
     padding: 15px 0 0 0;
 }
 
+
+/* Default for everything */
+@media screen and (min-width: 1px) {
+    .container      { width: 320px;   }
+    .hexagons       { width: 300px;   }
+
+    br, br.desktop, br.desktop-wide, br.mobile-wide {
+        display: none;
+    }
+
+    br.mobile       { display: block; }
+
+    .faq-content {
+        -webkit-column-count: 0;
+           -moz-column-count: 0;
+                column-count: 0;
+    }
+}
+
+
+
 @media screen and (min-width: 340px) {
     .container      { width: 320px;   }
     .hexagons       { width: 300px;   }
-    
-    
+
     br, br.desktop, br.desktop-wide, br.mobile-wide {
         display: none;
     }
