@@ -7,7 +7,6 @@ body {
     background: #34495E;
     padding: 0;
     margin: 0;
-    text-align: center;
     color:          #ECF0F1;
     line-height: 1.5em;
     font-family:   "Hevletica", "Arial", sans-serif;
@@ -42,7 +41,6 @@ p:first-child, p:first-child strong {
 h1, h2, h3 {
     font-family:   "Lato", "Hevletica", "Arial", sans-serif;
     font-weight:    300;
-    text-align: left;
     color:          #ECF0F1;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     line-height:    1.5em;
@@ -56,7 +54,6 @@ p, li {
 .header {
     background-color: #2C3E50;
     height: 144px;
-    text-align: left;
 }
 
 
@@ -99,20 +96,11 @@ h3 {
     font-weight: 600;
 }
 
+
 iframe {
-    float: left;
     margin-left: 25px;
-    width: 425px;
-    height: 350px;
 }
 
-.map-info {
-    text-align: left;
-    float: left;
-    width: 425px;
-    height: 350px;
-    margin-left: 60px;
-}
 
 .container {
     margin: 0 auto;
@@ -211,6 +199,16 @@ iframe {
            -moz-column-count: 0;
                 column-count: 0;
     }
+
+    iframe {
+        display: none;
+    }
+    
+    .map-info {
+        width: 275px;
+        height: 300px;
+        margin-left: 25px;
+    }
 }
 
 
@@ -230,6 +228,16 @@ iframe {
            -moz-column-count: 0;
                 column-count: 0;
     }
+
+    iframe {
+        display: none;
+    }
+    
+    .map-info {
+        width: 275px;
+        height: 300px;
+        margin-left: 25px;
+    }
 }
 
 
@@ -248,6 +256,16 @@ iframe {
            -moz-column-count: 0;
                 column-count: 0;
     }
+    
+    iframe, .map-info {
+        width: 435px;
+        height: 300px;
+    }
+    
+    .map-info {
+        margin-left: 25px;
+    }
+    
 }
 
 
@@ -266,6 +284,21 @@ iframe {
            -moz-column-count: 0;
                 column-count: 0;
     }
+    
+    iframe, .map-info {
+        width: 320px;
+        height: 300px;
+        float: left;
+    }
+    
+    .map-info {
+        margin-left: 35px;
+    }
+    
+    .map-info h3 {
+        margin-top: 9px;
+    }
+
 }
 
 @media screen and (min-width: 980px) {
@@ -283,12 +316,27 @@ iframe {
            -moz-column-count: 2;
                 column-count: 2;
     }
+
+    iframe, .map-info {
+        width: 425px;
+        height: 350px;
+        float: left;
+    }
+    
+    /* same as the column gap */
+    .map-info {
+        margin-left: 60px;
+    }
+    
+
 }
 
 
 
 
-
+.hexagons {
+    text-align: center;
+}
 
 .hexagons div {
     text-indent: 0;
