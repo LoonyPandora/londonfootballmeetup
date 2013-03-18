@@ -152,9 +152,11 @@ iframe {
 @media screen and (min-width: 340px) {
     .container      { width: 320px;   }
     .hexagons       { width: 300px;   }
-    br.desktop-wide { display: none;  }
-    br.desktop      { display: none;  }
-    br.mobile-wide  { display: none;  }
+    
+    
+    br, br.desktop, br.desktop-wide, br.mobile-wide {
+        display: none;
+    }
 
     br.mobile       { display: block; }
 
@@ -169,9 +171,10 @@ iframe {
 @media screen and (min-width: 500px) {
     .container      { width: 480px;   }
     .hexagons       { width: 360px;   }
-    br.desktop-wide { display: none;  }
-    br.desktop      { display: none;  }
-    br.mobile       { display: none;  }
+
+    br, br.desktop, br.desktop-wide, br.mobile {
+        display: none;
+    }
 
     br.mobile-wide  { display: block; }
 
@@ -186,11 +189,12 @@ iframe {
 @media screen and (min-width: 740px) {
     .container      { width: 720px;   }
     .hexagons       { width: 600px;   }
-    br.desktop-wide { display: none;  }
-    br.mobile-wide  { display: none;  }
-    br.mobile       { display: none;  }
 
-    br.desktop      { display: block; }
+    br, br.desktop-wide, br.mobile-wide, br.mobile {
+        display: none;
+    }
+
+    br.desktop { display: block; }
 
     .faq-content {
         -webkit-column-count: 0;
@@ -202,9 +206,10 @@ iframe {
 @media screen and (min-width: 980px) {
     .container      { width: 960px;   }
     .hexagons       { width: 830px;   }
-    br.desktop      { display: none;  }
-    br.mobile-wide  { display: none;  }
-    br.mobile       { display: none;  }
+    
+    br, br.desktop, br.mobile-wide, br.mobile {
+        display: none;
+    }
 
     br.desktop-wide { display: block; }
 

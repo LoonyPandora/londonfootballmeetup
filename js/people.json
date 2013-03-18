@@ -1,0 +1,20 @@
+"use strict";
+
+var people = {
+    "img/wilshere.png" : "Jack",
+    "img/welbeck.png" : "Danny",
+    "img/sophie-bradley.png" : "Sophie",
+    "img/rvp.png" : "Robin",
+    "img/messi.png" : "Lionel",
+    "img/lampard.png" : "Frank",
+    "img/kompany.png" : "Vincent",
+    "img/kagawa.png" : "Shinji",
+    "img/gerrard.png" : "Steven",
+    "img/fellaini.png" : "Marouane",
+    "img/fabregas.png" : "Francesc",
+    "img/de-gea.png" : "David",
+    "img/cristiano-ronaldo.png" : "Cristiano",
+    "img/james.jpg" : "James",
+    "img/bale.png" : "Gareth",
+    "img/anita-asante.png" : "Anita"
+};

@@ -86,6 +86,46 @@ $(document).ready(function(){
     });
 
 
+    // Render the hexagons using mustache
+    var $hexTemplate = $("#hexagon-template").html();
+    var i = 0;
+    $.each(people, function (key, value) {
+        $(".hexagons").append(
+            Mustache.render($hexTemplate, { "picture" : key, "name" : value })
+        );
+
+        var breakPoints = {
+            "desktopWide" : [6, 12, 19, 25, 32],
+            "desktop" : [4, 8, 13, 17, 22, 26, 31],
+            "mobileWide" : [2, 4, 7, 9, 12, 14, 17, 19, 21, 23],
+            "mobile" : [1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17]
+        }
+
+        var $br = $("<br/>");
+
+        if ($.inArray(i, breakPoints.mobile) > -1) {
+            $br.addClass("mobile");
+        }
+
+        if ($.inArray(i, breakPoints.mobileWide) > -1) {
+            $br.addClass("mobile-wide");
+        }
+
+        if ($.inArray(i, breakPoints.desktop) > -1) {
+            $br.addClass("desktop");
+        }
+
+        if ($.inArray(i, breakPoints.desktopWide) > -1) {
+            $br.addClass("desktop-wide");
+        }
+
+        $(".hexagons").append($br)
+
+        i++;
+    });
+
+
+
     // Show names on picture hover 
     // TODO: Make it handle touch events too
     $(".hexagons div").hover(
@@ -101,3 +141,4 @@ $(document).ready(function(){
     );
 
 });
+
