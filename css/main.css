@@ -55,14 +55,30 @@ h2 {
 
 
 .nav {
-    padding: 9px 0 9px 9px;
-    background: rgba( 255,255,255, 0.1);
+    padding: 7px 0 7px 9px;
+    background: #2C3E50;
     margin: 0 auto 1.5em auto;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
 }
+
 
 .nav li {
     text-align: center;
     margin-right: 10px;
+}
+
+.nav-pills > .active > a {
+    background-color: #16A085;
+}
+
+.nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
+    background-color: #1ABC9C;
+}
+
+.nav > li > a:hover, .nav > li > a:focus{
+    background-color: #34495E;
 }
 
 

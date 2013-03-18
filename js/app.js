@@ -54,8 +54,7 @@ $(document).ready(function(){
         dataType : "json",
         data     : { limit: 5 },
         success  : function(response, textStatus, jqXHR) {
-            
-            
+            // Bit hacky to parse out bits of the post with regexen, but will do for now
             var valid, wanted = [];
             $.each(response.data.description.split("\n"),
                 function (i, line) {
@@ -71,7 +70,7 @@ $(document).ready(function(){
                     }
                 }
             );
-            
+
             // Too simplistic to bother with a template
             $(".sidebar-content").append( markdown.toHTML(wanted.join("\n")) );
         },
@@ -81,7 +80,17 @@ $(document).ready(function(){
     });
 
 
+    // Workaround for google maps in an iframe on bootstrap tabs / modals
+    $("a[href=#stratford]").one('click', function(event) {
+        // Get the map link from the HTML, and re-insert it into the DOM
+        $("#stratford").html(
+            $("#stratford").html()
+        );
+    });
 
+
+    // Show names on picture hover 
+    // TODO: Make it handle touch events too
     $(".hexagons div").hover(
         function () {
             var $hexDiv = $(this);
