@@ -8,7 +8,7 @@ body {
     padding: 0;
     margin: 0;
     text-align: center;
-    color:          #eee;
+    color:          #ECF0F1;
     line-height: 1.5em;
     font-family:   "Hevletica", "Arial", sans-serif;
 }
@@ -21,6 +21,7 @@ a {
 a:hover {
     color: #fff;
 }
+
 
 
 p {
@@ -42,9 +43,14 @@ h1, h2, h3 {
     font-family:   "Lato", "Hevletica", "Arial", sans-serif;
     font-weight:    300;
     text-align: left;
-    color:          #eee;
+    color:          #ECF0F1;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     line-height:    1.5em;
+}
+
+p, li {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    
 }
 
 .header {
@@ -89,6 +95,9 @@ h2:first-child {
     margin-top: 23px;
 }
 
+h3 {
+    font-weight: 600;
+}
 
 iframe {
     float: left;
@@ -129,12 +138,12 @@ iframe {
 }
 
 .nav li a {
-    color: #eee !important;
+    color: #ECF0F1 !important;
     text-shadow: none !important;
 }
 
 .nav li.active a {
-    color: #eee !important;
+    color: #ECF0F1 !important;
     background-color: #2C3E50 !important;
 }
 
@@ -285,7 +294,7 @@ iframe {
     text-indent: 0;
     width: 99px;
     height: 117px;
-    background-color: #eee;
+    background-color: #ECF0F1;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
