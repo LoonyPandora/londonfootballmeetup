@@ -66,6 +66,11 @@ $(document).ready(function(){
                 }
             );
 
+            // Someone hasn't put dates in the sidebar! Default to something sensible
+            if (!dates.length){
+                dates = ["Next Saturday 2pm", "Next Sunday 2pm"]
+            }
+
             // Too simplistic to bother with a template
             $(".sidebar-content").append( markdown.toHTML(dates.join(" & ")) );
         },
