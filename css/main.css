@@ -67,6 +67,16 @@ h2 {
 iframe {
     float: left;
     margin-left: 25px;
+    width: 425px;
+    height: 350px;
+}
+
+.map-info {
+    text-align: left;
+    float: left;
+    width: 425px;
+    height: 350px;
+    margin-left: 60px;
 }
 
 .container {
