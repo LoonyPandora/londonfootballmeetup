@@ -54,31 +54,33 @@ h2 {
 }
 
 
+.navbar {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-inner {
+    background-image: -moz-linear-gradient(top, #34495E, #2C3E50);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#34495E), to(#2C3E50));
+    background-image: -webkit-linear-gradient(top, #34495E, #2C3E50);
+    background-image: -o-linear-gradient(top, #34495E, #2C3E50);
+    background-image: linear-gradient(to bottom, #34495E, #2C3E50);
+    border: 1px solid #2C3E50;
+}
+
 .nav {
-    padding: 7px 0 7px 9px;
-    background: #2C3E50;
-    margin: 0 auto 1.5em auto;
-    -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
+    padding: 0;
 }
 
-
-.nav li {
-    text-align: center;
-    margin-right: 10px;
+.nav li a {
+    color: #eee !important;
+    text-shadow: none !important;
 }
 
-.nav-pills > .active > a {
-    background-color: #16A085;
-}
-
-.nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
-    background-color: #1ABC9C;
-}
-
-.nav > li > a:hover, .nav > li > a:focus{
-    background-color: #34495E;
+.nav li.active a {
+    color: #eee !important;
+    background-color: #2C3E50 !important;
 }
 
 
