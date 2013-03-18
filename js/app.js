@@ -54,8 +54,26 @@ $(document).ready(function(){
         dataType : "json",
         data     : { limit: 5 },
         success  : function(response, textStatus, jqXHR) {
+            
+            
+            var valid, wanted = [];
+            $.each(response.data.description.split("\n"),
+                function (i, line) {
+                    if (line.match(/NEXT MEET UP/)) {
+                        valid = true;
+                        return true;
+                    } else if (line.match(/\*\*Weekend/)) {
+                        valid = false;
+                    };
+
+                    if (valid) {
+                        wanted.push(line.replace(/\W+/, ""));
+                    }
+                }
+            );
+            
             // Too simplistic to bother with a template
-            $(".sidebar-content").append( markdown.toHTML(response.data.description) );
+            $(".sidebar-content").append( markdown.toHTML(wanted.join("\n")) );
         },
         error : function() {
             console.log(arguments);

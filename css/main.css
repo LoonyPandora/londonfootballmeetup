@@ -47,12 +47,16 @@ h2 {
 
 
 
+.faq-content {
+    text-align: left;
+    margin: 0 auto;
+}
+
 
 .latest-posts {
     list-style: none;
     text-indent: 0;
     padding: 0;
-    width: 600px;
     margin: 0 auto;
 }
 
@@ -88,13 +92,13 @@ h2 {
 
 
 @media screen and (min-width: 380px) {
-    .hexagons, .latest-posts  { width: 360px; }
+    .hexagons, .latest-posts, .faq-content { width: 360px; }
     br.desktop { display: none; }
     br.mobile  { display: block; }
 }
 
 @media screen and (min-width: 630px) {
-    .hexagons, .latest-posts  { width: 600px; }
+    .hexagons, .latest-posts, .faq-content  { width: 600px; }
     br.desktop { display: block; }
     br.mobile  { display: none; }
 }
