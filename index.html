@@ -7,10 +7,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>London Football Meetup</title>
-    <meta name="description" content="London Football Meetup">
+    <meta name="description" content="London Football Meetup - A Reddit meetup for londoners who want to play football">
     <meta name="viewport" content="width=device-width">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -33,7 +31,7 @@
         <h2>Where We Play</h2>
         <div class="navbar">
             <div class="navbar-inner">
-                <ul class="nav">
+                <ul class="nav nav-stacked">
                     <li class="active"><a href="#regents-park" data-toggle="pill">Regent's Park</a></li>
                     <li><a href="#stratford" data-toggle="pill">Stratford</a></li>
                     <li><a href="#camden" data-toggle="pill">Camden</a></li>
@@ -51,17 +49,16 @@
             <div class="tab-pane" id="camden">CAMDEN</div>
         </div>
 
-        <h2>Latest Posts</h2>
 
+        <h2>Latest Posts</h2>
         <ul class="latest-posts"></ul>
 
 
         <h2>Regular Players</h2>
-
         <div class="hexagons"></div>
-
     </div>
 
+    <!-- JavaScript outside the head -->
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/mustache.min.js"></script>
     <script src="js/markdown.min.js"></script>
@@ -69,6 +66,7 @@
     <script src="js/people.json"></script>
     <script src="js/app.js"></script>
 
+    <!-- Mustache Templates -->
     <script id="latest-posts-template" type="text/template">
         <li>
             <a href="{{ url }}" title="{{ title }}">{{ title }}</a>
@@ -81,7 +79,6 @@
             <span class="bottom"></span>
         </div>
     </script>
-
 
     <!-- Google Analytics -->
     <script type="text/javascript">

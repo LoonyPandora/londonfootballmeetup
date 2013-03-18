@@ -1,5 +1,3 @@
-
-
 "use strict";
 
 $(document).ready(function(){
@@ -7,7 +5,7 @@ $(document).ready(function(){
     // List of posts
     $.ajax("http://api.reddit.com/r/londonfootballmeetup/new.json?jsonp=?", {
         dataType : "json",
-        data     : { limit: 5 },
+        data     : { limit: 10 },
         success  : function(response, textStatus, jqXHR) {
             var $template = $("#latest-posts-template").html();
 
@@ -58,7 +56,7 @@ $(document).ready(function(){
         dataType : "json",
         data     : { limit: 5 },
         success  : function(response, textStatus, jqXHR) {
-            // Bit hacky to parse out bits of the post with regexen, but will do for now
+            // Bit hacky to parse out the dates with regexen, but will do for now
             var dates = [];
             $.each(response.data.description.split("\n"),
                 function (i, line) {
