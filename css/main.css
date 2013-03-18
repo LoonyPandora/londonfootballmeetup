@@ -4,7 +4,7 @@
 
 
 body {
-    background: #34495E;
+    background: #a53125;
     padding: 0;
     margin: 0;
     color:          #ECF0F1;
@@ -47,7 +47,7 @@ strong {
 
 h1, h2 {
     font-family:   "Lato", "Hevletica", "Arial", sans-serif;
-    font-weight:    300;
+    font-weight:    900;
     color:          #ECF0F1;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     line-height:    1.5em;
@@ -65,22 +65,22 @@ p, li {
 }
 
 .banner {
-    height: 600px;
-    width: 72px;
-    height: 144px;
+    width: 36px;
+    height: 1944px;
     background: rgba(0,0,0,0.1);
-    border-left: 72px solid rgba(0,0,0,0.05);
+    border-left: 36px solid rgba(0,0,0,0.05);
     position: absolute;
     left: 0;
     top: 0;
+    bottom: 0;
 }
 
 
 .header {
-    background-color: #2C3E50;
+    background-color: #a53125;
     height: 144px;
-    position: relative;
-    overflow: hidden;
+/*    position: relative;*/
+/*    overflow: hidden;*/
 }
 
 
@@ -98,9 +98,10 @@ p, li {
 }
 
 h1 {
-    letter-spacing: -3px;
+    letter-spacing: -2px;
     /* word-spacing shifts center aligned text off-center - hence the hair space in the title */
     vertical-align: middle;
+    font-style: italic;
     font-size:      72px;
     padding:        0 0 0 0;
     margin:         0 0 0 -5px;
@@ -421,7 +422,7 @@ iframe {
     border-style: solid;
     background: transparent;
     border-width: 0 52px 30px 0;
-    border-color: transparent #34495E transparent transparent;
+    border-color: transparent #a53125 transparent transparent;
     z-index: 2;
 }
 
@@ -435,7 +436,7 @@ iframe {
     border-style: solid;
     background: transparent;
     border-width: 30px 52px 0 0;
-    border-color: #34495E transparent transparent transparent;
+    border-color: #a53125 transparent transparent transparent;
     z-index: 2;
 }
 
@@ -451,7 +452,7 @@ iframe {
     border-style: solid;
     background: transparent;
     border-width: 30px 0 0 52px;
-    border-color: transparent transparent transparent #34495E;
+    border-color: transparent transparent transparent #a53125;
     z-index: 2;
 }
 
@@ -465,7 +466,7 @@ iframe {
     border-style: solid;
     background: transparent;
     border-width: 0 0 30px 52px;
-    border-color: transparent transparent #34495E transparent;
+    border-color: transparent transparent #a53125 transparent;
     z-index: 2;
 }
 
