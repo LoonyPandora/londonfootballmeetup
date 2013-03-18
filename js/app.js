@@ -72,7 +72,7 @@ $(document).ready(function(){
             }
 
             // Too simplistic to bother with a template
-            $(".sidebar-content").append( markdown.toHTML(dates.join(" & ")) );
+            $(".sidebar-content").text( dates.join(" & ") );
         },
         error : function() {
             console.log(arguments);

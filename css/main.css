@@ -41,26 +41,52 @@ p:first-child, p:first-child strong {
 h1, h2, h3 {
     font-family:   "Lato", "Hevletica", "Arial", sans-serif;
     font-weight:    300;
-    text-align:     center;
+    text-align: left;
     color:          #eee;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     line-height:    1.5em;
 }
 
+.header {
+    background-color: #2C3E50;
+    height: 144px;
+    text-align: left;
+}
+
+
+.header p {
+    color: #7F8C8D;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-content {
+    color: #fff;
+}
 
 h1 {
-    background-color: #2C3E50;
     letter-spacing: -2px;
     /* word-spacing shifts center aligned text off-center - hence the hair space in the title */
     vertical-align: middle;
     font-size:      72px;
-    padding:        0 0 9px 0;
-    margin:         0 0 36px 0;
+    padding:        0 0 0 0;
+    margin:         0 0 0 -5px;
     text-rendering: optimizelegibility;
+
+    white-space:   nowrap;
+    overflow:      hidden;
+    text-overflow: ellipsis;
 }
 
 h2 {
     font-size: 28px;
+    margin-top: 46px;
+    border-bottom: 1px solid #D35400;
+}
+
+h2:first-child {
+    margin-top: 23px;
 }
 
 
@@ -116,7 +142,7 @@ iframe {
 .faq-content {
     text-align: left;
     margin: 0 auto;
-    padding: 0 25px;
+    padding: 0 5px;
 
     -webkit-column-count: 2;
        -moz-column-count: 2;
@@ -131,7 +157,7 @@ iframe {
 .latest-posts {
     list-style: none;
     text-indent: 0;
-    padding: 0 25px;
+    padding: 0 5px;
     margin: 0 auto;
 }
 
