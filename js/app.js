@@ -40,6 +40,10 @@ $(document).ready(function(){
             // Nice nesting reddit...
             var selfText = response[0].data.children[0].data.selftext;
 
+            // Hacky and crap regex cleanup of the markdown
+            selfText = selfText.replace(/\*\*FAQ\*\*/,"");
+            selfText = selfText.replace(/Time to update FAQ! Please post below if you see anything wrong or needs adding\./,"");
+
             // Too simplistic to bother with a template
             $(".faq-content").append( markdown.toHTML(selfText) );
         },
