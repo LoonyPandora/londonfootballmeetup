@@ -55,24 +55,17 @@ $(document).ready(function(){
         data     : { limit: 5 },
         success  : function(response, textStatus, jqXHR) {
             // Bit hacky to parse out bits of the post with regexen, but will do for now
-            var valid, wanted = [];
+            var dates = [];
             $.each(response.data.description.split("\n"),
                 function (i, line) {
-                    if (line.match(/NEXT MEET UP/)) {
-                        valid = true;
-                        return true;
-                    } else if (line.match(/\*\*Weekend/)) {
-                        valid = false;
-                    };
-
-                    if (valid) {
-                        wanted.push(line.replace(/\W+/, ""));
+                    if (line.match(/\d{1,2}(?:st|nd|rd|th)/)) {
+                        dates.push(line.replace(/\W+/, ""));
                     }
                 }
             );
 
             // Too simplistic to bother with a template
-            $(".sidebar-content").append( markdown.toHTML(wanted.join("\n")) );
+            $(".sidebar-content").append( markdown.toHTML(dates.join(" & ")) );
         },
         error : function() {
             console.log(arguments);
