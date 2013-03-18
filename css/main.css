@@ -14,7 +14,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #ddd;
+    color:          #ECF0F1;
 }
 
 a:hover {
@@ -30,17 +30,30 @@ p {
          -o-column-break-inside: avoid;
             column-break-inside: avoid;
 
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 p:first-child, p:first-child strong {
     margin-top: 0;
 }
 
+strong {
+    margin-top: 3em;
+    margin-bottom: 0;
+    display: block;
+    font-size: 19px;
+    color:          #ECF0F1;
+}
 
-h1, h2, h3 {
+h1, h2 {
     font-family:   "Lato", "Hevletica", "Arial", sans-serif;
     font-weight:    300;
+    color:          #ECF0F1;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    line-height:    1.5em;
+}
+
+h3 {
     color:          #ECF0F1;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     line-height:    1.5em;
@@ -51,9 +64,23 @@ p, li {
     
 }
 
+.banner {
+    height: 600px;
+    width: 72px;
+    height: 144px;
+    background: rgba(0,0,0,0.1);
+    border-left: 72px solid rgba(0,0,0,0.05);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
 .header {
     background-color: #2C3E50;
     height: 144px;
+    position: relative;
+    overflow: hidden;
 }
 
 
@@ -62,6 +89,8 @@ p, li {
     font-weight: normal;
     margin: 0;
     padding: 0;
+    position: relative;
+    z-index: 9;
 }
 
 .sidebar-content {
@@ -69,7 +98,7 @@ p, li {
 }
 
 h1 {
-    letter-spacing: -2px;
+    letter-spacing: -3px;
     /* word-spacing shifts center aligned text off-center - hence the hair space in the title */
     vertical-align: middle;
     font-size:      72px;
@@ -258,6 +287,7 @@ iframe {
     }
     
     iframe, .map-info {
+        display: block;
         width: 435px;
         height: 300px;
     }
@@ -286,6 +316,7 @@ iframe {
     }
     
     iframe, .map-info {
+        display: block;
         width: 320px;
         height: 300px;
         float: left;
@@ -318,6 +349,7 @@ iframe {
     }
 
     iframe, .map-info {
+        display: block;
         width: 425px;
         height: 350px;
         float: left;
