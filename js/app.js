@@ -5,7 +5,7 @@ $(document).ready(function(){
     // List of posts
     $.ajax("http://api.reddit.com/r/londonfootballmeetup/new.json?jsonp=?", {
         dataType : "json",
-        data     : { limit: 10 },
+        data     : { limit: 20 },
         success  : function(response, textStatus, jqXHR) {
             var $template = $("#latest-posts-template").html();
 
@@ -39,7 +39,9 @@ $(document).ready(function(){
 
             // Hacky and crap regex cleanup of the markdown
             selfText = selfText.replace(/\*\*FAQ\*\*/, "");
+            selfText = selfText.replace(/London Football Meetup = Football for all/, "");
             selfText = selfText.replace(/&amp;/g, "&");
+
 
             // Too simplistic to bother with a template
             $(".faq-content").append( markdown.toHTML(selfText) );
