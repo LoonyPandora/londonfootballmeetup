@@ -2,11 +2,20 @@
 
 body {
     background-color: #2d2d2d;
+    color: #34495e;
     font-size: 14px;
+}
+
+a {
+    color: #2980b9;
 }
 
 a:hover {
     text-decoration: none;
+}
+
+a:visited {
+    color: #8e44ad;
 }
 
 h1, h2, h3, h4 {
@@ -50,6 +59,7 @@ h2 {
     padding-top: 30px;;
     background-color: #fff;
     position: relative;
+    z-index: 999;
     min-height: 900px;
     margin-bottom: 100px;
 }
