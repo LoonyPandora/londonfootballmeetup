@@ -22,7 +22,7 @@ $(document).ready(function(){
                         fullDate: createdDate.format("dddd, MMMM Do YYYY, h:mm:ss a"),
                         permalink: post.data.permalink,
                         author: post.data.author,
-                        title: post.data.title,
+                        title: post.data.title.replace(/&amp;/g, "&"),
                         num_comments: post.data.num_comments
                     }
 

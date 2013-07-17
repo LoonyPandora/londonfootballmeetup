@@ -2,7 +2,7 @@
 
 body {
     background-color: #2d2d2d;
-/*    color: #ccc;*/
+    font-size: 14px;
 }
 
 a:hover {
@@ -22,51 +22,62 @@ h1 {
     text-align: left;
 }
 
-.container {
-    position: relative;
-/*    background-color: rgba(0,0,0,0.3);*/
+h2 {
+    color: #27ae60;
+    border-bottom: 1px solid #eee;
+    line-height: 40px;
+    margin: 0 0 23px 0;
+    font-weight: normal;
 }
+
 
 .hero {
     min-height: 200px;
+    font-size: 16px;
+    color: #aaa;
+    text-shadow: 1px 1px 0 #000;
 }
 
-.content {
-    margin-top: 40px;;
+
+.faq-content, .latest-posts {
+    margin-bottom: 40px;
+}
+
+
+
+.body {
+    margin-top: 20px;
+    padding-top: 30px;;
     background-color: #fff;
     position: relative;
     min-height: 900px;
+    margin-bottom: 100px;
 }
 
 
-.sidebar-content {
-    font-size: 16px;
-    color: #999;
-    text-shadow: 1px 1px 0 #000;
-    text-align: left;
+
+.faq-content {
+    padding-top: 5px;
+}
+
+p {
+    margin-bottom: 20px;
 }
 
 
-.latest-posts {
-/*    outline: 1px solid red;*/
-}
+
+
+
 
 .latest-posts li a {
     display: block;
-/*    height: 40px;*/
     padding: 5px 0;
-/*    outline: 1px solid green;*/
 }
-
-
-
 
 .latest-posts li a span {
     display: block;
     line-height: 20px;
-/*    height: 30px;*/
 }
-
 
 .latest-posts li a span.meta {
     font-size: 11px;
@@ -74,26 +85,24 @@ h1 {
 }
 
 
+
 /* Background Google Map
 -------------------------------------------------------------------------- */
 
-
-#map-canvas {
+#map-canvas, #map-overlay {
     position: fixed !important;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 800px;
+    top:    0;
+    right:  0;
+    bottom: 0;
+    left:   0;
 }
 
-/* To prevent scrolling of the map - it's just a pretty picture!
-   Also massive hack to change the color a bit.
-   I can't be bothered working with google's dodgy map wizard */
+#map-canvas {
+    bottom: -40px;
+}
+
+/* Massive hack to change the color a bit as I can't be bothered working with google's dodgy map wizard */
 #map-overlay {
-    position: fixed !important;
-    top: 0;
-    right: 0;
-    height: 800px;
-    left: 0;
     background-color: rgba(0,0,32,0.2);
+    pointer-events: none;
 }
