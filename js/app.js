@@ -4,6 +4,9 @@ $(document).ready(function(){
 
     var grid = new hashgrid();
 
+    initializeGoogleMap();
+
+
     // List of posts
     $.ajax("http://api.reddit.com/r/londonfootballmeetup/new.json?jsonp=?", {
         dataType : "json",
@@ -28,7 +31,7 @@ $(document).ready(function(){
 
                     $(".latest-posts").append(
                         Mustache.render($template, renderData)
-                    );
+                    ).addClass("animated fadeIn");
                 }
             );
         },
@@ -58,7 +61,9 @@ $(document).ready(function(){
             selfText = selfText.replace(/&amp;/g, "&");
 
             // Too simplistic to bother with a template
-            $(".faq-content").append( markdown.toHTML(selfText) );
+            $(".faq-content").append(
+                markdown.toHTML(selfText)
+            ).addClass("animated fadeIn");;
         },
         error : function() {
             console.log(arguments);
@@ -80,21 +85,19 @@ $(document).ready(function(){
             // If people like the site, we can modify the content to work everywhere
             description = description.replace(/\[Photo Albums\][\s\S]+/g, "");
 
-            $(".sidebar-content").append( markdown.toHTML(description) );
+            $(".sidebar-content").append(
+                markdown.toHTML(description)
+            ).addClass("animated fadeIn");;
         },
         error : function() {
             console.log(arguments);
         }
     });
 
-
-    var map;
-    initializeGMap();
-
 });
 
 
-function initializeGMap() {
+function initializeGoogleMap() {
     var styles = [{
         "elementType": "labels",
         "stylers": [{
@@ -117,7 +120,7 @@ function initializeGMap() {
 
     var mapOptions = {
         zoom: 13,
-        center: new google.maps.LatLng(51.511858,-0.077204),
+        center: new google.maps.LatLng(51.511858,-0.077204), // Focus around Regent's Park
         disableDefaultUI: true,
         scrollwheel: false,
         navigationControl: false,
@@ -125,12 +128,12 @@ function initializeGMap() {
         scaleControl: false,
         draggable: true,
         mapTypeControlOptions: {
-          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+            mapTypeIds: [google.maps.MapTypeId.ROADMAP, "map_style"]
         }
     };
 
-    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-    map.mapTypes.set('map_style', styledMap);
-    map.setMapTypeId('map_style');
+    map.mapTypes.set("map_style", styledMap);
+    map.setMapTypeId("map_style");
 }
