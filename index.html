@@ -20,6 +20,24 @@
 </head>
 <body>
 
+<div class="container">
+    <h1>London Football Meetup</h1>
+    <div class="sidebar-content"></div>
+
+    <h2>FAQ</h2>
+    <div class="faq-content"></div>
+
+    <h2>Latest Posts</h2>
+    <ul class="latest-posts"></ul>
+</div>
+
+
+<!-- Mustache Templates -->
+<script id="latest-posts-template" type="text/template">
+    <li>
+        <a href="http://reddit.com{{ permalink }}" title="{{ title }}">{{ title }}</a>
+    </li>
+</script>
 
 
 <!-- Until IE9 Disappears, we can't use defer - so JS still at the bottom -->
