@@ -2,6 +2,7 @@
 -------------------------------------------------------------------------- */
 
 body {
+    font-family: "Helvetica", "Arial", sans-serif;
     color:       #34495e;
     font-size:   14px;
     line-height: 20px;
@@ -17,7 +18,10 @@ p         { margin: 0 0 20px 0; }
 /* Headers
 -------------------------------------------------------------------------- */
 
-h1, h2, h3, h4 { text-rendering: optimizeLegibility; }
+h1, h2, h3, h4 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    text-rendering: optimizeLegibility;
+}
 
 h1 {
     font-size:   80px;
@@ -33,10 +37,10 @@ h1 {
 }
 
 h2 {
-    color:         #27ae60;
+    color:         #2c3e50;
     line-height:   40px;
-    border-bottom: 1px solid #eee;
-    font-weight:   normal;
+    border-bottom: 1px solid #ecf0f1;
+    font-weight:   200;
 
     /* border-bottom throws it slightly off grid */
     margin:        19px 0 20px 0;
@@ -157,7 +161,7 @@ h2 {
 }
 
 .reddit-link:hover {
-    color: #ccc;
+    color: #eee;
     text-decoration: none;
     text-shadow: none;
 }
