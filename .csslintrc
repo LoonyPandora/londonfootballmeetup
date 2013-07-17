@@ -1,0 +1,18 @@
+--ignore=unique-headings,important,fallback-colors
+
+
+# Ignored Options
+# ===============
+
+
+# unique-headings
+#   Headings should be defined only once.
+#   A silly rule. Some styles are shared between headings, so should be specified once
+
+# fallback-colors
+#   Appears to be a bug in CSSLint - specifying transparent as a fallback doesn't work
+#   Remove this option if/when that bug is fixed
+
+# important
+#   Useful in general, but we are using 3rd party markup
+#   So in practice we really need to override their stuff
