@@ -6,7 +6,6 @@ $(document).ready(function(){
 
     initializeGoogleMap();
 
-
     // List of posts
     $.ajax("http://api.reddit.com/r/londonfootballmeetup/new.json?jsonp=?", {
         dataType : "json",

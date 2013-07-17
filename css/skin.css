@@ -1,7 +1,7 @@
 
 
 body {
-    background-color: #2d2d2d;
+    background-color: #24242a;
     color: #34495e;
     font-size: 14px;
     line-height: 20px;
@@ -105,6 +105,11 @@ p {
     right:  0;
     height: 550px;
     left:   0;
+}
+
+/* Background of each tile should be closer to the real BG color */
+#map-canvas > div {
+    background-color: #24242a;
 }
 
 /* Massive hack to change the color a bit as I can't be bothered working with google's dodgy map wizard */
