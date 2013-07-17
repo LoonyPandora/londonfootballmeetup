@@ -15,26 +15,6 @@
     margin: 0;
 }
 
-/* Sidebar icons */
-#grid div.vert:nth-child(1) {
-    width: 60px;
-    background: rgba(255,0,0,0.2);
-}
-
-/* Filter List */
-#grid div.vert:nth-child(2) {
-    width: 280px;
-    background: rgba(0,255,0,0.1);
-}
-
-/* Content Pane */
-#grid div.vert:nth-child(3) {
-    left:   340px;
-    right:  0;
-    position: absolute;
-    background: rgba(0,0,255,0.1);
-}
-
 /* Horizontal grid, height should be line-height */
 #grid div.horiz {
     height: 20px;

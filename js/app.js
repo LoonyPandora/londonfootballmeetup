@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
 
+    var grid = new hashgrid();
+
     // List of posts
     $.ajax("http://api.reddit.com/r/londonfootballmeetup/new.json?jsonp=?", {
         dataType : "json",
@@ -42,7 +44,6 @@ $(document).ready(function(){
             selfText = selfText.replace(/London Football Meetup = Football for all/, "");
             selfText = selfText.replace(/&amp;/g, "&");
 
-
             // Too simplistic to bother with a template
             $(".faq-content").append( markdown.toHTML(selfText) );
         },
@@ -61,7 +62,10 @@ $(document).ready(function(){
 
             // Remove links to the FAQ which we show inline
             description = description.replace(/&amp;/g, "&");
-            description = description.replace(/New to our subreddit.+\n\n/g, "");
+
+            // This info doesn't work well in a website format, so strip it for now
+            // If people like the site, we can modify the content to work everywhere
+            description = description.replace(/\[Photo Albums\][\s\S]+/g, "");
 
             $(".sidebar-content").append( markdown.toHTML(description) );
         },
