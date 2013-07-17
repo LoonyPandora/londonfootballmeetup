@@ -38,6 +38,7 @@ h1 {
 
 h2 {
     color:         #2c3e50;
+    font-size:     32px;
     line-height:   40px;
     border-bottom: 1px solid #ecf0f1;
     font-weight:   200;
@@ -165,3 +166,18 @@ h2 {
     text-decoration: none;
     text-shadow: none;
 }
+
+
+
+/* Media Queries
+-------------------------------------------------------------------------- */
+
+@media(max-width:992px){
+    h1 { font-size: 60px; }
+}
+
+@media(max-width:769px){
+    h1 { font-size: 60px; }
+    h2 { font-size: 26px; }
+}
+
