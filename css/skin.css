@@ -1,5 +1,9 @@
 
 
+body {
+    background-color: #2d2d2d;
+}
+
 h1, h2, h3, h4 {
     text-rendering: optimizeLegibility;
 }
