@@ -58,7 +58,7 @@ h2 {
     margin: 0 0 10px 0;
 }
 
-#map-canvas, #map-overlay {
+.google-map {
     /* google maps sets it to position relative in the HTML. This is the only way to override */
     position:   fixed !important;
     top:        0;
@@ -68,12 +68,14 @@ h2 {
 }
 
 /* Background of each tile should be closer to the real BG color */
-#map-canvas, #map-overlay, #map-canvas > div {
+.google-map, .google-map > div {
     background: #2d2d2d;
 }
 
 /* Massive hack to change the color a bit as I can't be bothered working with google's dodgy map wizard */
-#map-overlay {
+.overlay {
+    /* IE8 gets a transparent fallback */
+    background-color: transparent;
     background-color: rgba(0,0,32,0.2);
     pointer-events:   none;
 }
@@ -116,7 +118,7 @@ h2 {
     line-height: 20px;
 }
 
-.latest-posts li a span.meta {
+.meta {
     font-size: 11px;
     color:     #999;
 }
@@ -142,10 +144,11 @@ h2 {
     line-height: 95px;
     height:      100px;
     color:       #000;
-    text-shadow: rgba(255, 255, 255, 0.1) 0px 1px 0px;
+    text-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
 
     -webkit-transition: all .5s linear;
        -moz-transition: all .5s linear;
+         -o-transition: all .5s linear;
             transition: all .5s linear;
 }
 
