@@ -44,7 +44,7 @@ function initializeGoogleMap() {
 function showRecentPosts() {
     $.ajax("http://api.reddit.com/r/londonfootballmeetup/new.json?jsonp=?", {
         dataType : "json",
-        data     : { limit: 20 },
+        data     : { limit: 25 },
         success  : function (response, textStatus, jqXHR) {
             var $template = $("#latest-posts-template").html();
 
