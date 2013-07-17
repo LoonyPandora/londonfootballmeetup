@@ -2,11 +2,50 @@
 
 body {
     background-color: #2d2d2d;
+/*    color: #ccc;*/
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 h1, h2, h3, h4 {
     text-rendering: optimizeLegibility;
 }
+
+h1 {
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+    text-align: left;
+}
+
+.container {
+    position: relative;
+/*    background-color: rgba(0,0,0,0.3);*/
+}
+
+.hero {
+    min-height: 200px;
+}
+
+.content {
+    margin-top: 40px;;
+    background-color: #fff;
+    position: relative;
+    min-height: 900px;
+}
+
+
+.sidebar-content {
+    font-size: 16px;
+    color: #999;
+    text-shadow: 1px 1px 0 #000;
+    text-align: left;
+}
+
 
 .latest-posts {
 /*    outline: 1px solid red;*/
@@ -19,9 +58,6 @@ h1, h2, h3, h4 {
 /*    outline: 1px solid green;*/
 }
 
-.latest-posts li a:hover {
-    text-decoration: none;
-}
 
 
 
@@ -38,19 +74,26 @@ h1, h2, h3, h4 {
 }
 
 
+/* Background Google Map
+-------------------------------------------------------------------------- */
+
+
 #map-canvas {
     position: fixed !important;
     top: 0;
     right: 0;
-    bottom: -40px;
     left: 0;
+    height: 800px;
 }
 
-/* To prevent scrolling of the map - it's just a pretty picture! */
+/* To prevent scrolling of the map - it's just a pretty picture!
+   Also massive hack to change the color a bit.
+   I can't be bothered working with google's dodgy map wizard */
 #map-overlay {
     position: fixed !important;
     top: 0;
     right: 0;
-    bottom: 0;
+    height: 800px;
     left: 0;
+    background-color: rgba(0,0,32,0.2);
 }
