@@ -26,10 +26,6 @@ $(document).ready(function(){
                         num_comments: post.data.num_comments
                     }
 
-
-
-                    console.log(renderData);
-                    
                     $(".latest-posts").append(
                         Mustache.render($template, renderData)
                     );
@@ -91,5 +87,45 @@ $(document).ready(function(){
         }
     });
 
+
+    var map;
+    initializeGMap();
+
 });
 
+
+function initializeGMap() {
+    var styles = [{
+        "elementType": "labels",
+        "stylers": [{
+            "visibility": "off"
+        }]
+    }, {
+        "elementType": "geometry",
+        "stylers": [{
+            "saturation": -100
+        }, {
+            "lightness": -80
+        }, {
+            "visibility": "simplified"
+        }]
+    }];
+
+    var styledMap = new google.maps.StyledMapType(styles, {
+        name: "Styled Map"
+    });
+
+    var mapOptions = {
+        zoom: 13,
+        center: new google.maps.LatLng(51.511858,-0.077204),
+        disableDefaultUI: true,
+        mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+        }
+    };
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    map.mapTypes.set('map_style', styledMap);
+    map.setMapTypeId('map_style');
+}

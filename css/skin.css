@@ -1,5 +1,9 @@
 
 
+h1, h2, h3, h4 {
+    text-rendering: optimizeLegibility;
+}
+
 .latest-posts {
 /*    outline: 1px solid red;*/
 }
@@ -27,4 +31,22 @@
 .latest-posts li a span.meta {
     font-size: 11px;
     color: #999;
+}
+
+
+#map-canvas {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    bottom: -40px;
+    left: 0;
+}
+
+/* To prevent scrolling of the map - it's just a pretty picture! */
+#map-overlay {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
