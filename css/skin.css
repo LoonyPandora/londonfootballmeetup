@@ -1,0 +1,30 @@
+
+
+.latest-posts {
+/*    outline: 1px solid red;*/
+}
+
+.latest-posts li a {
+    display: block;
+/*    height: 40px;*/
+    padding: 5px 0;
+/*    outline: 1px solid green;*/
+}
+
+.latest-posts li a:hover {
+    text-decoration: none;
+}
+
+
+
+.latest-posts li a span {
+    display: block;
+    line-height: 20px;
+/*    height: 30px;*/
+}
+
+
+.latest-posts li a span.meta {
+    font-size: 11px;
+    color: #999;
+}

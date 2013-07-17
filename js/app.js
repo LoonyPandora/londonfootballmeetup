@@ -13,8 +13,25 @@ $(document).ready(function(){
 
             $.each(response.data.children,
                 function (i, post) {
+                    
+                    // Munge the data structure to what we need with formatted date/time
+                    var createdDate = moment.unix(post.data.created_utc);
+
+                    var renderData = {
+                        relativeDate: createdDate.fromNow(),
+                        fullDate: createdDate.format("dddd, MMMM Do YYYY, h:mm:ss a"),
+                        permalink: post.data.permalink,
+                        author: post.data.author,
+                        title: post.data.title,
+                        num_comments: post.data.num_comments
+                    }
+
+
+
+                    console.log(renderData);
+                    
                     $(".latest-posts").append(
-                        Mustache.render($template, post.data)
+                        Mustache.render($template, renderData)
                     );
                 }
             );
