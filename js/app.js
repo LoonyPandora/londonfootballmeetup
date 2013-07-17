@@ -40,13 +40,8 @@ function initializeGoogleMap() {
 }
 
 
-$(document).ready(function () {
-
-    new hashgrid();
-
-    initializeGoogleMap();
-
-    // List of posts
+// Gets and displays the lists of all "new" posts from the reddit API
+function showRecentPosts() {
     $.ajax("http://api.reddit.com/r/londonfootballmeetup/new.json?jsonp=?", {
         dataType : "json",
         data     : { limit: 20 },
@@ -85,8 +80,11 @@ $(document).ready(function () {
             );
         }
     });
+}
 
-    // FAQ page
+
+// Gets and displays the FAQ post - a hardcoded link
+function showFAQPost() {
     $.ajax("http://api.reddit.com/comments/19wn4j.json?jsonp=?", {
         dataType : "json",
         data     : { limit: 5 },
@@ -108,9 +106,11 @@ $(document).ready(function () {
             console.log(arguments);
         }
     });
+}
 
 
-    // Subreddit info page
+// Gets and displays the subreddit info page. The sidebar on the subreddit
+function showInfoPage() {
     $.ajax("http://api.reddit.com/r/londonfootballmeetup/about.json?jsonp=?", {
         dataType : "json",
         data     : { limit: 5 },
@@ -132,7 +132,24 @@ $(document).ready(function () {
             console.log(arguments);
         }
     });
+}
 
+
+// Lets get this show on the road!
+$(document).ready(function () {
+    // Setup the baseline grid (hold down "G" to see it)
+    new hashgrid();
+
+    // Setup the BG Map
+    initializeGoogleMap();
+
+    // List of posts
+    showRecentPosts();
+
+    // FAQ page
+    showFAQPost();
+
+    // Subreddit info page
+    showInfoPage();
 });
-
 
