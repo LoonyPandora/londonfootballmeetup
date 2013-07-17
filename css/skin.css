@@ -29,11 +29,10 @@ h1 {
     color:       #fff;
 
     /* Headlines can take this tight spacing, and the negative indent is for optical kerning */
-    text-indent:    -4px;
     letter-spacing: -1px;
 
     /* Metrics of Arial / Helvetic mean 80px font-size == 88px actual height */
-    margin: 20px 0 12px 0;
+    margin: 20px 0 12px -4px;
 }
 
 h2 {
@@ -52,11 +51,13 @@ h2 {
 -------------------------------------------------------------------------- */
 
 .hero {
-    margin:      0 0 10px 0;
+    padding:     0 0 20px 0;
     min-height:  220px;
     font-size:   16px;
     color:       #ccc;
     text-shadow: 1px 1px 0 #000;
+    overflow: hidden;
+    position: relative;
 }
 
 .hero p {
@@ -65,11 +66,11 @@ h2 {
 
 .google-map {
     /* google maps sets it to position relative in the HTML. This is the only way to override */
-    position:   fixed !important;
+    position:   absolute !important;
     top:        0;
     right:      0;
     left:       0;
-    height:     550px;
+    bottom:     -30px;
 }
 
 /* Background of each tile should be closer to the real BG color */
@@ -93,13 +94,9 @@ h2 {
 /* White background that we have to put on top of the static google map */
 .body {
     background: #fff;
-    position:   relative;
     min-height: 900px;
-    margin:     0 0 100px 0;
-    box-shadow: 0 0 10px #000;
-
-    /* forces it above the footer */
-    z-index: 1;
+    margin:     0;
+/*    display: none;*/
 }
 
 /* For smaller viewports, make sure there is a large enough gap */
@@ -137,7 +134,7 @@ h2 {
     width:  100%;
     height: 100px;
     background: #222;
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
 
@@ -173,11 +170,11 @@ h2 {
 -------------------------------------------------------------------------- */
 
 @media(max-width:992px){
-    h1 { font-size: 60px; }
+    h1 { font-size: 62px; }
 }
 
 @media(max-width:769px){
-    h1 { font-size: 60px; }
+    h1 { font-size: 62px; }
     h2 { font-size: 26px; }
 }
 
