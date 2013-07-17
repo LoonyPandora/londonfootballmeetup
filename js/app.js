@@ -124,7 +124,7 @@ function showInfoPage() {
             // If people like the site, we can modify the content to work everywhere
             description = description.replace(/\[Photo Albums\][\s\S]+/g, "");
 
-            $(".sidebar-content").append(
+            $(".info-content").append(
                 markdown.toHTML(description)
             ).addClass("animated fadeIn");
         },
