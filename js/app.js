@@ -119,6 +119,11 @@ function initializeGMap() {
         zoom: 13,
         center: new google.maps.LatLng(51.511858,-0.077204),
         disableDefaultUI: true,
+        scrollwheel: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        draggable: true,
         mapTypeControlOptions: {
           mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
         }
