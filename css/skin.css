@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size:   80px;
+    font-size:   71px;
     font-weight: bold;
     color:       #fff;
 
@@ -52,12 +52,12 @@ h2 {
 
 .hero {
     padding:     0 0 20px 0;
-    min-height:  220px;
+    min-height:  210px;
     font-size:   16px;
     color:       #ccc;
     text-shadow: 1px 1px 0 #000;
-    overflow: hidden;
-    position: relative;
+    overflow:    hidden;
+    position:    relative;
 }
 
 .hero p {
@@ -174,7 +174,8 @@ h2 {
 }
 
 @media(max-width:769px){
-    h1 { font-size: 44px; }
-    h2 { font-size: 26px; }
+    h1    { font-size: 44px; margin-left: -2px; }
+    h2    { font-size: 26px; }
+    .hero { font-size: 14px; }
 }
 
